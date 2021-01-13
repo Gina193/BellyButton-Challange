@@ -122,35 +122,36 @@ function buildCharts(sample) {
 
 //Deliverable 3: 
 
-// // 4. Create the trace for the gauge chart.
-// var wfrq = data.wfreq
+// 4. Create the trace for the gauge chart.
+var wfrq = data.wfreq
 
-// var gaugeData = [{
-//     domain: {x: [0, 1], y: [0,1]},
-//     values: wfreq,
-//     type: 'indicator',
-//     mode: "gauge+number",
-//     title: { text: "Belly Button Washing Frequency" },
-//     gauge: {
-//         axis: { range: [null, 10]},
-//         bar: { color: "darkblue" },
-//         steps: [
-//             { range: [0, 2], color: "red"},
-//             { range: [2, 4], color: "orange"},
-//             { range: [4, 6], color: "yellow"},
-//             { range: [6, 8], color: "limegreen"},
-//             { range: [8, 10], color: "green"}
-//         ]
-//     }
-// }];
+var gaugeData = [{
+    domain: {x: [0, 1], y: [0,1]},
+    values: wfreq,
+    type: 'indicator',
+    mode: "gauge+number",
+    title: { text: "Belly Button Washing Frequency" },
+    gauge: {
+        axis: { range: [null, 10]},
+        bar: { color: "darkblue" },
+        steps: [
+            { range: [0, 2], color: "red"},
+            { range: [2, 4], color: "orange"},
+            { range: [4, 6], color: "yellow"},
+            { range: [6, 8], color: "limegreen"},
+            { range: [8, 10], color: "green"}
+        ]
+    }
+}];
 
-// // 5. Create the layout for the gauge chart.
-// var gaugeLayout = { 
+// 5. Create the layout for the gauge chart.
+var gaugeLayout = { 
+    title: "Belly Button Washing Frequency",
+    
+};
 
-// };
+// 6. Use Plotly to plot the gauge data and layout.
+Plotly.newPlot("gauge", gaugeData, gaugeLayout);
 
-// // 6. Use Plotly to plot the gauge data and layout.
-// Plotly.newPlot("gauge", gaugeData, gaugeLayout);
-
-// });
-// }
+});
+}
